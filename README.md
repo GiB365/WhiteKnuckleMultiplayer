@@ -41,7 +41,7 @@ A "working" multiplayer mod for White Knuckle.
 
 - [x]  Hosting
 - [x]  Joining
-- [ ]  Leaving
+- [x]  Leaving
 - [ ]  Remove player on leave
 - [x]  Position sync
 - [x]  Rotation sync
