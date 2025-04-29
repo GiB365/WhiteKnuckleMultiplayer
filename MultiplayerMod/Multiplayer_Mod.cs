@@ -9,7 +9,7 @@ public class Multiplayer_Mod : MonoBehaviour {
 
     EventBasedNetListener serverListener;
     EventBasedNetListener clientListener;
-    NetManager client;
+    public NetManager client;
     NetManager server;
     NetPeer serverPeer;
 
@@ -17,6 +17,7 @@ public class Multiplayer_Mod : MonoBehaviour {
     Dictionary<int, GameObject> players;
 
     int nextPlayerId = 0;
+    public int seed;
 
     enum PacketTypes {
         TransformUpdate = 0,
@@ -44,6 +45,7 @@ public class Multiplayer_Mod : MonoBehaviour {
 
         maxPlayerCount = 4;
         players = new Dictionary<int, GameObject>();
+        seed = WorldLoader.instance.seed;
 
         CreateCommands();
     }
@@ -51,6 +53,21 @@ public class Multiplayer_Mod : MonoBehaviour {
     public void CreateCommands() {
         CommandConsole.AddCommand("host", Host);
         CommandConsole.AddCommand("join", Join);
+        CommandConsole.AddCommand("leave", Leave);
+    }
+
+    public void Leave(string[] args) {
+        if (server.IsRunning) {
+            server.DisconnectAll();
+        }
+
+        client.DisconnectAll();
+
+        foreach (KeyValuePair<int, GameObject> player in players) {
+            Destroy(player.Value);
+        }
+
+        players.Clear();
     }
 
     public void Host(string[] args) {
@@ -178,7 +195,9 @@ public class Multiplayer_Mod : MonoBehaviour {
 
                     break;
                 case (int)PacketTypes.SeedUpdate:
-                    WorldLoader.ReloadWithSeed([dataReader.GetInt().ToString()]);
+                    seed = dataReader.GetInt();
+
+                    WorldLoader.ReloadWithSeed([seed.ToString()]);
 
                     break;
                 case (int)PacketTypes.CreatePlayer:
