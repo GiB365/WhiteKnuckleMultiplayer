@@ -14,6 +14,11 @@ A "working" multiplayer mod for White Knuckle.
 
 ## FAQ
 
+#### How to install?
+
+    Put all files in the "Game Folder Path/White Knuckle_Data/Managed" folder.
+    Start the game and it should be working.
+
 #### How to host a server?
 
     1. Open the command console by pressing "Shift+~"  
