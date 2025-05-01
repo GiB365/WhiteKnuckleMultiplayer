@@ -42,11 +42,11 @@ A "working" multiplayer mod for White Knuckle.
 - [x]  Hosting
 - [x]  Joining
 - [x]  Leaving
-- [ ]  Remove player on leave
+- [x]  Remove player on leave
 - [x]  Position sync
 - [x]  Rotation sync
 - [x]  Seed sync when connecting
-- [ ]  Stay on seed after death
+- [x]  Stay on seed after death
 - [ ]  Better player model
 - [ ]  Player death particles
 
