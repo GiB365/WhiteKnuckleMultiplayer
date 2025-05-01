@@ -16,7 +16,7 @@ A "working" multiplayer mod for White Knuckle.
 
 #### How to install?
 
-    Put all files in the "Game Folder Path/White Knuckle_Data/Managed" folder.
+    Put both .dll files in the "Game Folder Path/White Knuckle_Data/Managed" folder.
     Start the game and it should be working.
 
 #### How to host a server?
