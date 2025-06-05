@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>WK_Multiplayer_Mod</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\White Knuckle_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\White Knuckle_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\White Knuckle_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\White Knuckle_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteNetLib">
+      <HintPath>.\References\LiteNetLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ALINE">
+      <HintPath>..\..\.steam\debian-installation\steamapps\common\White Knuckle\White Knuckle_Data\Managed\ALINE.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
