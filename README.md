@@ -16,7 +16,9 @@ A "working" multiplayer mod for White Knuckle.
 
 #### How to install?
 
-    Put both .dll files in the "Game Folder Path/White Knuckle_Data/Managed" folder.
+    Download the latest BepInEx x64.
+    Extract the files in the While Knuckle game folder.
+    Put both .dll files in the "Game Folder Path/BepInEx/plugins" folder.
     Start the game and it should be working.
 
 #### How to host a server?
